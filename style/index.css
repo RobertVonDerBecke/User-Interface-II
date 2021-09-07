@@ -277,7 +277,8 @@ footer {
 	}
 }
 @media (max-width: 500px) {
+	/* Daughter said blue so it blue for now, thanks */
 	body {
-		/* background-color: hotpink; */
+		background-color: lightskyblue; 
 	}
 }
