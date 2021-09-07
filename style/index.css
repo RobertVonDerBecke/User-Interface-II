@@ -129,6 +129,7 @@ body {
 	box-sizing: border-box;
 	font-size: 1.6rem;
 	max-width: 100%;
+
 }
 h1 {
 	font-weight: bold;
@@ -149,6 +150,9 @@ nav {
 	display: flex;
 	justify-content: space-evenly;
 }
+.mobileNav {
+	display: none;
+}
 a {
 	border: 2px solid gray;
 	width: 22%;
@@ -156,6 +160,7 @@ a {
 	text-decoration: none;
 	padding: 1%;
 	color: black;
+	font-size: 70%;
 }
 a:hover {
 	background-color: black;
@@ -184,12 +189,16 @@ section div.innerTitleContent h2 {
 	font-weight: bold;
 	color: white;
 }
+section div.innerTitleContent a {
+	font-size: 2rem;
+	color: gray;
+}
+
 section.gallery {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	margin:1%;
-	
+	margin: 1%;
 }
 section.gallery div.pic {
 	display: flex;
@@ -199,10 +208,12 @@ section.gallery div.pic {
 	width: 30%;
 	max-height: 300px;
 }
+section.gallery div.pic p {
+	margin-top: 2%;
+}
 .gallery div img {
 	object-fit: contain;
 	overflow: hidden;
-
 }
 footer {
 	display: flex;
@@ -212,4 +223,61 @@ footer {
 	background-color: lightgray;
 	height: 15vh;
 	vertical-align: bottom;
+}
+@media (max-width: 800px) {
+	section.gallery {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	section.gallery div.pic {
+		width: 80%;
+		margin: 2% 0;
+		padding-bottom: 2%;
+	}
+	section.title {
+		flex-direction: column;
+		align-items: center;
+		height: 100px;
+		margin-top: 4%;
+		/* width: 80%; */
+	}
+	section div.innerTitleContent {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+		height: 50vh;
+		background-image: url(https://images.unsplash.com/photo-1473172707857-f9e276582ab6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	section div.innerTitleContent h2 {
+		font-size: 2rem;
+		font-weight: bold;
+		color: white;
+	}
+	#btnTop {
+		display: none;
+	}
+	header {
+		display: none;
+	}
+
+	h1 {
+		margin-top: 2%;
+		width: 100%;
+	}
+	.mobileNav {
+		display: block;
+		width: 80%;
+		margin: auto;
+		padding-top: 2%;
+	}
+}
+@media (max-width: 500px) {
+	body {
+		/* background-color: hotpink; */
+	}
 }
